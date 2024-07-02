@@ -1,0 +1,6 @@
+.body {
+	background: url("/ext-files/website-icons/PortalSEDAM/BackgroundFor404.jpg") center/cover no-repeat, #f1f1f1;
+}
+.not-found-card {
+	background-color: rgba(0, 70, 50, 0.75);
+}

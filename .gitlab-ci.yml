@@ -1,0 +1,19 @@
+include:
+  - project: "SEDAM/templates"
+    ref: dev
+    file: "buildAndPublish.gitlab-ci.yml"
+
+workflow:
+  name: "Frontend SEDAM"
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      changes:
+        - version.config
+      variables:
+        DOCKER_ENV: "production"
+        DOCKER_TAG: "latest"
+    - changes:
+        - version.config
+      variables:
+        DOCKER_ENV: "development"
+        CI_CD_REPO_NAME: "portal-sedam"

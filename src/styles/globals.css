@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes ping-custom {
+  0%,
+  100% {
+    transform: scale(1.7);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0.5;
+  }
+}
+
+.animate-ping-custom {
+  animation: ping-custom 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+div#__next {
+  min-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-button:single-button {
+  height: 16px;
+  background-color: #2a4d14;
+  border: 1px solid #6d7451;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-size: 120%;
+  background-position: center;
+  background-image: url("/ext-files/website-icons/chevron-up.svg");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-size: 120%;
+  background-position: center;
+  background-image: url("/ext-files/website-icons/chevron-down.svg");
+}
+
+::-webkit-scrollbar-button:hover {
+  background-color: #557143;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #7f9472;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a4d14;
+  border: 1px solid #6d7451;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #557143;
+}
+
+input[type="file"] {
+  position: relative;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  cursor: pointer;
+  top: 6px;
+  left: 10px;
+  height: 24px;
+  width: 24px;
+  content: "";
+  background-image: url("/ext-files/website-icons/file-up.svg");
+}
+
+input[type="file"]::file-selector-button {
+  width: 45px;
+  border-right: 1px solid #b6c187;
+  color: transparent;
+}
+
+@supports (-moz-appearance: none) {
+  input[type="file"]::file-selector-button {
+    width: initial;
+    color: #e4ebdc;
+  }
+}
+
+@media (min-width: 640px) {
+  .text-shadow {
+    text-shadow: 0px 0px 4px black;
+  }
+}

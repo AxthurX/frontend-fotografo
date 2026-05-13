@@ -2,17 +2,17 @@
 
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { BottomNav } from "./components/BottomNav"
-import { CategoryIcon } from "./components/CategoryIcon"
-import { Header } from "./components/Header"
-import { ProductCard } from "./components/ProductCard"
+import { BottomNav } from "../components/BottomNav"
+import { CategoryIcon } from "../components/CategoryIcon"
+import { Header } from "../components/Header"
+import { ProductCard } from "../components/ProductCard"
 import {
   categories,
   combos,
   getColdProducts,
   getMostOrdered,
   promotions,
-} from "./data/products"
+} from "../data/products"
 
 export default function GelassoHome() {
   const mostOrdered = getMostOrdered()

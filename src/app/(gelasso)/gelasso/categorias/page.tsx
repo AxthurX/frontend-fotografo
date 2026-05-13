@@ -1,11 +1,10 @@
 "use client"
 
 import { ArrowLeft } from "lucide-react"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { BottomNav } from "../components/BottomNav"
-import { CategoryIcon } from "../components/CategoryIcon"
-import { categories } from "../data/products"
+import { BottomNav } from "../../components/BottomNav"
+import { CategoryIcon } from "../../components/CategoryIcon"
+import { categories } from "../../data/products"
 
 export default function CategoriesPage() {
   const router = useRouter()

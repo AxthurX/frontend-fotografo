@@ -1,7 +1,6 @@
 "use client"
 
 import {
-  ArrowLeft,
   Bell,
   ChevronRight,
   CreditCard,
@@ -12,8 +11,7 @@ import {
   User,
 } from "lucide-react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { BottomNav } from "../components/BottomNav"
+import { BottomNav } from "../../components/BottomNav"
 
 const menuItems = [
   { icon: MapPin, label: "Meus endereços", href: "/gelasso/endereco" },
@@ -24,8 +22,6 @@ const menuItems = [
 ]
 
 export default function ProfilePage() {
-  const router = useRouter()
-
   return (
     <div className="min-h-screen bg-neutral-100 pb-20">
       {/* Header */}

@@ -1,9 +1,9 @@
 "use client"
 
-import { Check, Clock, CreditCard } from "lucide-react"
+import { Check, Clock } from "lucide-react"
 import Link from "next/link"
 import { useEffect } from "react"
-import { useCart } from "../context/CartContext"
+import { useCart } from "../../context/CartContext"
 
 export default function SuccessPage() {
   const { total, deliveryFee, clearCart } = useCart()
@@ -47,9 +47,7 @@ export default function SuccessPage() {
       {/* Payment Info */}
       <div className="bg-gray-50 rounded-xl p-4 w-full max-w-sm mb-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-red-600 font-medium">Pagamento</span>
-          </div>
+          <span className="text-red-600 font-medium">Pagamento</span>
           <span className="text-gray-600">Pix</span>
         </div>
         <div className="flex items-center justify-between mt-2">

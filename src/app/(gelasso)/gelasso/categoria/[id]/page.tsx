@@ -2,9 +2,9 @@
 
 import { ArrowLeft } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
-import { BottomNav } from "../../components/BottomNav"
-import { ProductCard } from "../../components/ProductCard"
-import { categories, getProductsByCategory } from "../../data/products"
+import { BottomNav } from "../../../components/BottomNav"
+import { ProductCard } from "../../../components/ProductCard"
+import { categories, getProductsByCategory } from "../../../data/products"
 
 export default function CategoryPage() {
   const params = useParams()

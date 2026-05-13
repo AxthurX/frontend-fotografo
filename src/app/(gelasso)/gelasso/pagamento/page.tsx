@@ -4,7 +4,7 @@ import { ArrowLeft, Check, CreditCard, Banknote, ShieldCheck } from "lucide-reac
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { useCart } from "../context/CartContext"
+import { useCart } from "../../context/CartContext"
 
 type PaymentMethod = "pix" | "cash" | "card"
 

@@ -19,8 +19,8 @@ import {
 import Link from "next/link"
 import { useParams, useRouter } from "next/navigation"
 import { useState } from "react"
-import { useCart } from "../../context/CartContext"
-import { getProductById, products } from "../../data/products"
+import { useCart } from "../../../context/CartContext"
+import { getProductById, products } from "../../../data/products"
 
 export default function ProductDetailPage() {
   const params = useParams()

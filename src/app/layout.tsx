@@ -1,37 +1,35 @@
-import { LayoutWrapper } from '@/components/LayoutWrapper';
-import { Toaster } from '@/components/ui/toaster';
-import { sen } from '@/lib/font/Sen';
-import reportAccessibility from '@/lib/reportAccessibility';
 import '@/styles/globals.css';
-import type { Metadata } from 'next';
-import React from 'react';
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import { CartProvider } from '@/context/CartContext';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-	title: 'Extreme | Encontre um fotógrafo',
-	description: 'Site de fotografias',
-	icons: {
-		icon: '/favicon.ico',
-	},
-	authors: [
-		{
-			name: 'Agrodev',
-		},
-	],
+  title: 'GELASSO | Bebidas Geladas na sua Porta',
+  description: 'Delivery de bebidas geladas com entrega rápida em até 30 minutos',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#b91c1c',
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang='pt-BR' data-theme='theme'>
-			<body className={sen.className}>
-				<LayoutWrapper>{children}</LayoutWrapper>
-				<Toaster />
-			</body>
-		</html>
-	);
+  return (
+    <html lang="pt-BR">
+      <body className={`${inter.variable} font-sans bg-neutral-100 min-h-screen`}>
+        <CartProvider>{children}</CartProvider>
+      </body>
+    </html>
+  );
 }
-
-reportAccessibility(React);
